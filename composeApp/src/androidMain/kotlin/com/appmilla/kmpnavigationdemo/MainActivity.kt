@@ -10,12 +10,17 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             App()
+            /*
+            val router = rememberRouter()
+            router.registerRoute("/screens/home", AndroidScreen { HomeScreen(router) })
+            router.registerRoute("/screens/news", AndroidScreen { NewsScreen(router) })
+            router.NavHostContent()*/
         }
     }
 }
+
 
 @Preview
 @Composable

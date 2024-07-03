@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E52C347A0F001976EB /* HomeView.swift */; };
+		CFBA10E82C347A79001976EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E72C347A79001976EB /* NewsView.swift */; };
+		CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */; };
+		CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */; };
+		D57C2CF1102A55D7D3BA8F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C2E0E2E943D71D25268BB /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* KMPNavigationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMPNavigationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		CFBA10E52C347A0F001976EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CFBA10E72C347A79001976EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterExtensions.swift; sourceTree = "<group>"; };
+		D57C2E0E2E943D71D25268BB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +77,13 @@
 			isa = PBXGroup;
 			children = (
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
-				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				D57C2E0E2E943D71D25268BB /* AppDelegate.swift */,
+				CFBA10E52C347A0F001976EB /* HomeView.swift */,
+				CFBA10E72C347A79001976EB /* NewsView.swift */,
+				CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */,
+				CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -184,8 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */,
+				CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */,
+				CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */,
+				CFBA10E82C347A79001976EB /* NewsView.swift in Sources */,
+				D57C2CF1102A55D7D3BA8F1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
