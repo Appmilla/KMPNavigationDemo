@@ -6,7 +6,7 @@ import SwiftUI
 import Shared
 
 struct HomeView: View {
-    @EnvironmentObject var router: IOSRouter
+    @EnvironmentObject var router: DarwinRouter
 
     var body: some View {
         VStack {

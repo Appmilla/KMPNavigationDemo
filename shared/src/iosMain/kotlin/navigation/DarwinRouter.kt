@@ -3,7 +3,7 @@ package navigation
 import platform.UIKit.UINavigationController
 import platform.UIKit.UIViewController
 
-class IOSRouter(private val navigationController: UINavigationController) : Router {
+class DarwinRouter(private val navigationController: UINavigationController) : Router {
     val routes = mutableMapOf<String, () -> UIViewController>()
 
     override fun navigate(uri: String) {
@@ -14,8 +14,8 @@ class IOSRouter(private val navigationController: UINavigationController) : Rout
     }
 
     override fun registerRoute(uri: String, screen: Screen) {
-        routes[uri] = (screen as? IOSScreen)?.createViewController ?: { UIViewController() }
+        routes[uri] = (screen as? DarwinScreen)?.createViewController ?: { UIViewController() }
     }
 }
 
-class IOSScreen(val createViewController: () -> UIViewController) : Screen
+class DarwinScreen(val createViewController: () -> UIViewController) : Screen

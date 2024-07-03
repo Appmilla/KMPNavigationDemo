@@ -5,14 +5,14 @@ import Shared
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var router: IOSRouter?
+    var router: DarwinRouter?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
         let navigationController = UINavigationController()
-        let router = IOSRouter(navigationController: navigationController)
+        let router = DarwinRouter(navigationController: navigationController)
         self.router = router
 
         setupRoutes(router: router)
@@ -28,27 +28,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    private func setupRoutes(router: IOSRouter) {
+    private func setupRoutes(router: DarwinRouter) {
         print("AppDelegate: Setting up routes")
         
         // SwiftUI Home
-        router.registerRoute(uri: "/screens/home", screen: IOSScreen {
+        router.registerRoute(uri: "/screens/home", screen: DarwinScreen {
             UIHostingController(rootView: HomeView().environmentObject(router))
         })
         
         // SwiftUI News
         
-        router.registerRoute(uri: "/screens/news", screen: IOSScreen {
+        router.registerRoute(uri: "/screens/news", screen: DarwinScreen {
             UIHostingController(rootView: NewsView().environmentObject(router))
         })
 
         // Compose Multiplatform News
-        router.registerRoute(uri: "/screens/newsCMP", screen: IOSScreen {
+        router.registerRoute(uri: "/screens/newsCMP", screen: DarwinScreen {
             NewsViewControllerKt.NewsViewController(router: router)
         })
         
         //UIKit screen
-        router.registerRoute(uri: "/screens/uikit", screen: IOSScreen {
+        router.registerRoute(uri: "/screens/uikit", screen: DarwinScreen {
                     UIKitViewController(router: router)
                 })
 

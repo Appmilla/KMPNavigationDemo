@@ -4,9 +4,9 @@ import UIKit
 import Shared
 
 class UIKitViewController: UIViewController {
-    private let router: IOSRouter
+    private let router: DarwinRouter
 
-    init(router: IOSRouter) {
+    init(router: DarwinRouter) {
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }
