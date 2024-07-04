@@ -47,5 +47,6 @@ struct HomeView: View {
         .onAppear {
             print("HomeView: Appeared")
         }
+        .navigationTitle("Home SwiftUI")
     }
 }

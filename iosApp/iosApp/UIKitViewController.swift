@@ -29,6 +29,8 @@ class UIKitViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+        
+        self.navigationItem.title = "UIKit"
     }
 
     @objc private func goToHome() {

@@ -43,14 +43,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
 
         // Compose Multiplatform News
+        let newsComposeViewController = NewsViewControllerKt.NewsViewController(router: router)
+        newsComposeViewController.navigationItem.title = "News CMP"
+        
         router.registerRoute(uri: "/screens/newsCMP", screen: DarwinScreen {
-            NewsViewControllerKt.NewsViewController(router: router)
+            newsComposeViewController
         })
         
         //UIKit screen
         router.registerRoute(uri: "/screens/uikit", screen: DarwinScreen {
                     UIKitViewController(router: router)
-                })
+        })
 
         
         // Set the initial view

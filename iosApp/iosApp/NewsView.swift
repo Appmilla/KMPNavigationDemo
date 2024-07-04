@@ -25,5 +25,6 @@ struct NewsView: View {
         .onAppear {
             print("NewsView: Appeared")
         }
+        .navigationTitle("News SwiftUI")
     }
 }
