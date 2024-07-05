@@ -12,7 +12,7 @@ struct NewsView: View {
                 .background(Color.blue)
             Button(action: {
                 print("NewsView: Button pressed, navigating to Home Screen")
-                router.navigate(uri: "/screens/home")
+                router.pop()
             }) {
                 Text("Go to Home Screen")
                     .padding()

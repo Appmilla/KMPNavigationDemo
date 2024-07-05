@@ -35,7 +35,7 @@ class UIKitViewController: UIViewController {
 
     @objc private func goToHome() {
         print("UIKitViewController: Button pressed, navigating to Home Screen")
-        router.navigate(uri: "/screens/home")
+        router.pop()
     }
 }
 

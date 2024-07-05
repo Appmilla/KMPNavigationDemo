@@ -29,7 +29,7 @@ fun NewsScreen(router: Router) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text("News Screen")
             Spacer(modifier = Modifier.height(8.dp))
-            Button(onClick = { router.navigate("/screens/home") }) {
+            Button(onClick = { router.pop() }) {
                 Text("Go to Home Screen")
             }
         }

@@ -4,13 +4,17 @@ import platform.UIKit.UINavigationController
 import platform.UIKit.UIViewController
 
 class DarwinRouter(private val navigationController: UINavigationController) : Router {
-    val routes = mutableMapOf<String, () -> UIViewController>()
+    private val routes = mutableMapOf<String, () -> UIViewController>()
 
     override fun navigate(uri: String) {
         routes[uri]?.let { createViewController ->
             val viewController = createViewController()
             navigationController.pushViewController(viewController, true)
         }
+    }
+
+    override fun pop() {
+        navigationController.popViewControllerAnimated(true)
     }
 
     override fun registerRoute(uri: String, screen: Screen) {
