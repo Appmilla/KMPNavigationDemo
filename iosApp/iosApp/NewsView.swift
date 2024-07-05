@@ -1,8 +1,9 @@
 import SwiftUI
 import Shared
 
-struct NewsView: View {
-    @EnvironmentObject var router: DarwinRouter
+struct NewsView: ViewControllable {
+    var router: DarwinRouter
+    var holder = NavStackHolder()
 
     var body: some View {
         VStack {
@@ -11,7 +12,6 @@ struct NewsView: View {
                 .padding()
                 .background(Color.blue)
             Button(action: {
-                print("NewsView: Button pressed, navigating to Home Screen")
                 router.pop()
             }) {
                 Text("Go to Home Screen")
@@ -22,9 +22,13 @@ struct NewsView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.yellow)
-        .onAppear {
-            print("NewsView: Appeared")
-        }
-        .navigationTitle("News SwiftUI")
+    }
+
+    func loadView() {
+        // Additional setup if needed
+    }
+
+    func viewOnAppear(viewController: UIViewController) {
+        // Additional actions when the view appears
     }
 }

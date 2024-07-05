@@ -1,12 +1,9 @@
 import SwiftUI
 import Shared
 
-
-import SwiftUI
-import Shared
-
-struct HomeView: View {
-    @EnvironmentObject var router: DarwinRouter
+struct HomeView: ViewControllable {
+    var router: DarwinRouter
+    var holder = NavStackHolder()
 
     var body: some View {
         VStack {
@@ -15,7 +12,6 @@ struct HomeView: View {
                 .padding()
                 .background(Color.green)
             Button(action: {
-                print("HomeView: Button pressed, navigating to News Screen")
                 router.navigate(uri: "/screens/news")
             }) {
                 Text("Go to News Screen")
@@ -24,7 +20,6 @@ struct HomeView: View {
                     .cornerRadius(10)
             }
             Button(action: {
-                print("HomeView: Button pressed, navigating to UIKit Screen")
                 router.navigate(uri: "/screens/uikit")
             }) {
                 Text("Goto UIKit")
@@ -33,7 +28,6 @@ struct HomeView: View {
                     .cornerRadius(10)
             }
             Button(action: {
-                print("HomeView: Button pressed, navigating to News CMP Screen")
                 router.navigate(uri: "/screens/newsCMP")
             }) {
                 Text("Go to News CMP")
@@ -44,9 +38,13 @@ struct HomeView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white)
-        .onAppear {
-            print("HomeView: Appeared")
-        }
-        .navigationTitle("Home SwiftUI")
+    }
+
+    func loadView() {
+        // Additional setup if needed
+    }
+
+    func viewOnAppear(viewController: UIViewController) {
+        // Additional actions when the view appears
     }
 }

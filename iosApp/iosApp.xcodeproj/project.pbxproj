@@ -10,6 +10,8 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		CF162FA12C37EB0900BBF0A2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FA02C37EB0900BBF0A2 /* MainCoordinator.swift */; };
+		CF162FA32C381BBB00BBF0A2 /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FA22C381BBB00BBF0A2 /* ViewControllable.swift */; };
+		CF162FA52C381C1E00BBF0A2 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */; };
 		CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E52C347A0F001976EB /* HomeView.swift */; };
 		CFBA10E82C347A79001976EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E72C347A79001976EB /* NewsView.swift */; };
 		CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */; };
@@ -24,6 +26,8 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CF162FA02C37EB0900BBF0A2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		CF162FA22C381BBB00BBF0A2 /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
+		CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CFBA10E52C347A0F001976EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CFBA10E72C347A79001976EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */,
 				CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */,
 				CF162FA02C37EB0900BBF0A2 /* MainCoordinator.swift */,
+				CF162FA22C381BBB00BBF0A2 /* ViewControllable.swift */,
+				CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF162FA52C381C1E00BBF0A2 /* ViewControllerExtensions.swift in Sources */,
+				CF162FA32C381BBB00BBF0A2 /* ViewControllable.swift in Sources */,
 				CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */,
 				CF162FA12C37EB0900BBF0A2 /* MainCoordinator.swift in Sources */,
 				CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */,
