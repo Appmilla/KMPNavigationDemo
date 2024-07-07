@@ -22,8 +22,11 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
+            export(libs.lifecycle.viewmodel)
+            //export(libs.androidx.core.ktx)
+            //export(libs.compose.runtime)
             baseName = "Shared"
-            isStatic = true
+            //isStatic = true
         }
     }
     
@@ -36,6 +39,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            api(libs.lifecycle.viewmodel)
         }
         androidMain.dependencies {
             implementation(compose.preview)
