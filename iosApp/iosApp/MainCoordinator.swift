@@ -39,12 +39,11 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
             let hostingController = ViewModelHostingController<NewsView, NewsViewModel>(rootView: newsView)
             return hostingController
         })
-
+        
         router.registerRoute(uri: "/screens/newsCMP", screen: DarwinScreen {
             let newsComposeViewController = NewsViewControllerKt.NewsViewController(router: router)
             newsComposeViewController.navigationItem.title = "News CMP"
-            let wrapperViewController = ViewModelWrapperViewController(wrappedViewController: newsComposeViewController)
-            return wrapperViewController
+            return newsComposeViewController
         })
         
         router.registerRoute(uri: "/screens/uikit", screen: DarwinScreen {
