@@ -28,16 +28,15 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
 
     private func setupRoutes(router: Router) {
         router.registerRoute(uri: "/screens/home", screen: DarwinScreen {
-            let homeViewModel = KotlinDependencies.shared.getHomeViewModel()
-            let homeView = HomeView(viewModel: homeViewModel, holder: NavStackHolder())
-            let hostingController = ViewModelHostingController(rootView: homeView)
+            let homeView = HomeView(holder: NavStackHolder())
+            let hostingController = ViewModelHostingController<HomeView, HomeViewModel>(rootView: homeView)
+
             return hostingController
         })
-
+        
         router.registerRoute(uri: "/screens/news", screen: DarwinScreen {
-            let newsViewModel = KotlinDependencies.shared.getNewsViewModel()
-            let newsView = NewsView(viewModel: newsViewModel, holder: NavStackHolder())
-            let hostingController = ViewModelHostingController(rootView: newsView)
+            let newsView = NewsView(holder: NavStackHolder())
+            let hostingController = ViewModelHostingController<NewsView, NewsViewModel>(rootView: newsView)
             return hostingController
         })
 

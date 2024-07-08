@@ -9,6 +9,8 @@ public class NavStackHolder {
 }
 
 public protocol ViewControllable: View {
+    associatedtype VM
+    var viewModel: VM? { get set }
     var holder: NavStackHolder { get set }
     
     func loadView()

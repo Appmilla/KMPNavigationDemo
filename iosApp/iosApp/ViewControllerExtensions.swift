@@ -1,3 +1,4 @@
+/*
 import UIKit
 
 extension UIViewController: UINavigationControllerDelegate {
@@ -12,6 +13,6 @@ extension UIViewController: UINavigationControllerDelegate {
             controllable.viewOnAppear(viewController: viewController)
         }
     }
-}
+}*/
 
 
