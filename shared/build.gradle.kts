@@ -23,8 +23,6 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             export(libs.lifecycle.viewmodel)
-            //export(libs.androidx.core.ktx)
-            //export(libs.compose.runtime)
             baseName = "Shared"
             //isStatic = true
         }
@@ -70,6 +68,5 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.runtime.android)
-    implementation(libs.androidx.core.ktx) // TODO check if it is needed
     implementation(libs.koin.android)
 }
