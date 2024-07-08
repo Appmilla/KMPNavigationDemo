@@ -21,7 +21,6 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
     }
 
     func start() {
-        //let router = DarwinRouter(navigationController: navigationController)
         let router = KotlinDependencies.shared.getRouter()
         setupRoutes(router: router)
         router.navigate(uri: "/screens/home")
@@ -29,13 +28,15 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
 
     private func setupRoutes(router: Router) {
         router.registerRoute(uri: "/screens/home", screen: DarwinScreen {
-            let homeView = HomeView(router: router, holder: NavStackHolder())
+            let homeViewModel = KotlinDependencies.shared.getHomeViewModel()
+            let homeView = HomeView(viewModel: homeViewModel, holder: NavStackHolder())
             let hostingController = ViewModelHostingController(rootView: homeView)
             return hostingController
         })
 
         router.registerRoute(uri: "/screens/news", screen: DarwinScreen {
-            let newsView = NewsView(router: router, holder: NavStackHolder())
+            let newsViewModel = KotlinDependencies.shared.getNewsViewModel()
+            let newsView = NewsView(viewModel: newsViewModel, holder: NavStackHolder())
             let hostingController = ViewModelHostingController(rootView: newsView)
             return hostingController
         })

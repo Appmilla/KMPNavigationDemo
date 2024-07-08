@@ -2,7 +2,7 @@ import SwiftUI
 import Shared
 
 struct NewsView: ViewControllable {
-    var router: Router
+    var viewModel: NewsViewModel
     var holder = NavStackHolder()
 
     var body: some View {
@@ -12,7 +12,7 @@ struct NewsView: ViewControllable {
                 .padding()
                 .background(Color.blue)
             Button(action: {
-                router.pop()
+                viewModel.navigateBack()
             }) {
                 Text("Go to Home Screen")
                     .padding()

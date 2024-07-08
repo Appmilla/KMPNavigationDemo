@@ -2,7 +2,7 @@ import SwiftUI
 import Shared
 
 struct HomeView: ViewControllable {
-    var router: Router
+    var viewModel: HomeViewModel
     var holder = NavStackHolder()
 
     var body: some View {
@@ -12,7 +12,7 @@ struct HomeView: ViewControllable {
                 .padding()
                 .background(Color.green)
             Button(action: {
-                router.navigate(uri: "/screens/news")
+                viewModel.navigateToNews()
             }) {
                 Text("Go to News Screen")
                     .padding()
@@ -20,7 +20,7 @@ struct HomeView: ViewControllable {
                     .cornerRadius(10)
             }
             Button(action: {
-                router.navigate(uri: "/screens/uikit")
+                viewModel.navigateToUIKit()
             }) {
                 Text("Goto UIKit")
                     .padding()
@@ -28,7 +28,7 @@ struct HomeView: ViewControllable {
                     .cornerRadius(10)
             }
             Button(action: {
-                router.navigate(uri: "/screens/newsCMP")
+                viewModel.navigateToSharedNews()
             }) {
                 Text("Go to News CMP")
                     .padding()

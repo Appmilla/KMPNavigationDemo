@@ -12,4 +12,17 @@ class HomeViewModel(
     fun navigateToNews() {
         router.navigate("/screens/news")
     }
+
+    fun navigateToUIKit() {
+        router.navigate("/screens/uikit")
+    }
+
+    fun navigateToSharedNews() {
+        router.navigate("/screens/newsCMP")
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        println("HomeViewModel onCleared")
+    }
 }

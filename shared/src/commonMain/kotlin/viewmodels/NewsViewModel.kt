@@ -13,4 +13,9 @@ class NewsViewModel(
     fun navigateBack() {
         router.pop()
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        println("NewsViewModel onCleared")
+    }
 }
