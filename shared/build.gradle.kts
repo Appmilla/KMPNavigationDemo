@@ -40,6 +40,8 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             api(libs.lifecycle.viewmodel)
+            api(libs.koin.core)
+            implementation(libs.koin.composeVM)
         }
         androidMain.dependencies {
             implementation(compose.preview)
@@ -68,4 +70,6 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.runtime.android)
+    implementation(libs.androidx.core.ktx) // TODO check if it is needed
+    implementation(libs.koin.android)
 }

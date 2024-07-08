@@ -18,6 +18,8 @@ navigationCompose = "2.7.7"
 navigationRuntimeKtx = "2.7.7"
 runtimeAndroid = "1.6.8"
 compose = "2.0.0"
+koin = "3.6.0-Beta4"
+koinComposeMultiplatform = "1.2.0-Beta4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -35,6 +37,10 @@ androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navig
 androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewModel"}
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinComposeMultiplatform" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

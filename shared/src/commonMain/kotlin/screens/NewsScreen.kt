@@ -14,11 +14,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
+import viewmodels.NewsViewModel
 
-import navigation.Router
-
+@OptIn(KoinExperimentalAPI::class)
 @Composable
-fun NewsScreen(router: Router) {
+fun NewsScreen() {
+    val newsViewModel = koinViewModel<NewsViewModel>()
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -29,7 +32,7 @@ fun NewsScreen(router: Router) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text("News Screen")
             Spacer(modifier = Modifier.height(8.dp))
-            Button(onClick = { router.pop() }) {
+            Button(onClick = { newsViewModel.navigateBack() }) {
                 Text("Go to Home Screen")
             }
         }

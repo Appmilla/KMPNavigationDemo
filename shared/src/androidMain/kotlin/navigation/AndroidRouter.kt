@@ -34,9 +34,10 @@ class AndroidRouter(private val navController: NavHostController) : Router {
     }
 }
 
+/*
 // Helper function to remember the nav controller and router
 @Composable
 fun rememberRouter(): AndroidRouter {
     val navController = rememberNavController()
     return AndroidRouter(navController)
-}
+}*/
