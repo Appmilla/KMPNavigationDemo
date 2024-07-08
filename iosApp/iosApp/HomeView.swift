@@ -2,7 +2,7 @@ import SwiftUI
 import Shared
 
 struct HomeView: ViewControllable {
-    var router: DarwinRouter
+    var router: Router
     var holder = NavStackHolder()
 
     var body: some View {

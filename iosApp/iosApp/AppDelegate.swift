@@ -8,6 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: MainCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let coordinator = MainCoordinator(navigationController: navigationController)
         self.coordinator = coordinator
 
+        let router = DarwinRouter(navigationController: navigationController)
+        Koin.start(router: router)
+        
         coordinator.start()
 
         window.rootViewController = navigationController

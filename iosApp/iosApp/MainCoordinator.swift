@@ -21,12 +21,13 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
     }
 
     func start() {
-        let router = DarwinRouter(navigationController: navigationController)
+        //let router = DarwinRouter(navigationController: navigationController)
+        let router = KotlinDependencies.shared.getRouter()
         setupRoutes(router: router)
         router.navigate(uri: "/screens/home")
     }
 
-    private func setupRoutes(router: DarwinRouter) {
+    private func setupRoutes(router: Router) {
         router.registerRoute(uri: "/screens/home", screen: DarwinScreen {
             let homeView = HomeView(router: router, holder: NavStackHolder())
             let hostingController = ViewModelHostingController(rootView: homeView)

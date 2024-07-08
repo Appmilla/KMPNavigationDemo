@@ -2,7 +2,7 @@ import SwiftUI
 import Shared
 
 struct NewsView: ViewControllable {
-    var router: DarwinRouter
+    var router: Router
     var holder = NavStackHolder()
 
     var body: some View {

@@ -14,6 +14,7 @@
 		CF162FA52C381C1E00BBF0A2 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */; };
 		CF162FAD2C3A93D500BBF0A2 /* ViewModelHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FAC2C3A93D500BBF0A2 /* ViewModelHostingController.swift */; };
 		CF162FAF2C3A973C00BBF0A2 /* ViewModelWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FAE2C3A973C00BBF0A2 /* ViewModelWrapperViewController.swift */; };
+		CF162FB12C3BCC5200BBF0A2 /* Koin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF162FB02C3BCC5200BBF0A2 /* Koin.swift */; };
 		CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E52C347A0F001976EB /* HomeView.swift */; };
 		CFBA10E82C347A79001976EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E72C347A79001976EB /* NewsView.swift */; };
 		CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */; };
@@ -32,6 +33,7 @@
 		CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CF162FAC2C3A93D500BBF0A2 /* ViewModelHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelHostingController.swift; sourceTree = "<group>"; };
 		CF162FAE2C3A973C00BBF0A2 /* ViewModelWrapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWrapperViewController.swift; sourceTree = "<group>"; };
+		CF162FB02C3BCC5200BBF0A2 /* Koin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koin.swift; sourceTree = "<group>"; };
 		CFBA10E52C347A0F001976EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CFBA10E72C347A79001976EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				CF162FA42C381C1E00BBF0A2 /* ViewControllerExtensions.swift */,
 				CF162FAC2C3A93D500BBF0A2 /* ViewModelHostingController.swift */,
 				CF162FAE2C3A973C00BBF0A2 /* ViewModelWrapperViewController.swift */,
+				CF162FB02C3BCC5200BBF0A2 /* Koin.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				CF162FAF2C3A973C00BBF0A2 /* ViewModelWrapperViewController.swift in Sources */,
 				CF162FA12C37EB0900BBF0A2 /* MainCoordinator.swift in Sources */,
 				CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */,
+				CF162FB12C3BCC5200BBF0A2 /* Koin.swift in Sources */,
 				CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */,
 				CFBA10E82C347A79001976EB /* NewsView.swift in Sources */,
 				D57C2CF1102A55D7D3BA8F1B /* AppDelegate.swift in Sources */,

@@ -6,6 +6,6 @@ import org.koin.core.module.Module
 
 actual class KoinInitializer {
     actual fun init(platformSpecific: Module): KoinApplication = startKoin {
-        modules(appModule() + platformSpecific)
+        modules(darwinModule + appModule() + platformSpecific)
     }
 }
