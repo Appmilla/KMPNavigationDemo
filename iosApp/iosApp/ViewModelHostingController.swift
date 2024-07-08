@@ -15,7 +15,7 @@ class ViewModelHostingController<ContentView: ViewControllable, VM: ViewModel>: 
             rootView.viewModel = viewModel
         }
 
-        print("ViewModelHostingController.viewModel: \(viewModel)")
+        print("ViewModelHostingController.viewModel: \(String(describing: viewModel))")
         rootView.loadView()
     }
 
