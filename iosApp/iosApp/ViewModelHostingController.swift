@@ -12,7 +12,7 @@ class ViewModelHostingController<ContentView: ViewControllable, VM: ViewModel>: 
 
         // Configure the rootView with the resolved ViewModel
         if let viewModel = viewModel {
-            rootView.viewModel = viewModel
+            rootView.observedViewModel = viewModel
         }
 
         print("ViewModelHostingController.viewModel: \(String(describing: viewModel))")

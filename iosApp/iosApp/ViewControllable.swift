@@ -8,11 +8,18 @@ public class NavStackHolder {
     public init() {}
 }
 
-public protocol ViewControllable: View {
-    associatedtype VM
+protocol ViewControllable: View {
+    associatedtype VM: ObservableObject
     var viewModel: VM? { get set }
     var holder: NavStackHolder { get set }
     
     func loadView()
     func viewOnAppear(viewController: UIViewController)
+}
+
+extension ViewControllable {
+    var observedViewModel: VM? {
+        get { viewModel }
+        set { viewModel = newValue }
+    }
 }

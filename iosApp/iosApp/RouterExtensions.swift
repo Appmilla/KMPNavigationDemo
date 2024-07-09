@@ -8,3 +8,9 @@ extension DarwinRouter: ObservableObject {
         return ObservableObjectPublisher()
     }
 }
+
+extension ViewModel: ObservableObject {
+    public var objectWillChange: ObservableObjectPublisher {
+        return ObservableObjectPublisher()
+    }
+}

@@ -2,6 +2,7 @@ import SwiftUI
 import Shared
 
 struct HomeView: ViewControllable {
+    // Use a property without the wrapper for protocol conformance
     var viewModel: HomeViewModel?
     var holder = NavStackHolder()
 
