@@ -1,10 +1,10 @@
-
 import Foundation
 import Shared
 import Combine
 
-extension DarwinRouter: ObservableObject {
+extension ViewModel: ObservableObject {
     public var objectWillChange: ObservableObjectPublisher {
         return ObservableObjectPublisher()
     }
 }
+
