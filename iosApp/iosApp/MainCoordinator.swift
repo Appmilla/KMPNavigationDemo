@@ -30,13 +30,15 @@ class MainCoordinator: NSObject, Coordinator, ObservableObject {
         router.registerRoute(uri: "/screens/home", screen: DarwinScreen {
             let homeView = HomeView(holder: NavStackHolder())
             let hostingController = ViewModelHostingController<HomeView, HomeViewModel>(rootView: homeView)
-
+            hostingController.navigationItem.title = "Home"
+            
             return hostingController
         })
         
         router.registerRoute(uri: "/screens/news", screen: DarwinScreen {
             let newsView = NewsView(holder: NavStackHolder())
             let hostingController = ViewModelHostingController<NewsView, NewsViewModel>(rootView: newsView)
+            hostingController.navigationItem.title = "News"
             return hostingController
         })
         
