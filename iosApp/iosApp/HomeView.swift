@@ -19,7 +19,7 @@ struct HomeView: ViewControllable {
                 .padding()
                 .background(Color.green)
             Button(action: {
-                viewModel?.navigateToNews()
+                observedViewModel?.navigateToNews()
             }) {
                 Text("Go to News Screen")
                     .padding()
@@ -27,7 +27,7 @@ struct HomeView: ViewControllable {
                     .cornerRadius(10)
             }
             Button(action: {
-                viewModel?.navigateToUIKit()
+                observedViewModel?.navigateToUIKit()
             }) {
                 Text("Goto UIKit")
                     .padding()
@@ -35,7 +35,7 @@ struct HomeView: ViewControllable {
                     .cornerRadius(10)
             }
             Button(action: {
-                viewModel?.navigateToSharedNews()
+                observedViewModel?.navigateToSharedNews()
             }) {
                 Text("Go to News CMP")
                     .padding()

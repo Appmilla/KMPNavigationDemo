@@ -19,7 +19,7 @@ struct NewsView: ViewControllable {
                 .padding()
                 .background(Color.blue)
             Button(action: {
-                viewModel?.navigateBack()
+                observedViewModel?.navigateBack()
             }) {
                 Text("Go to Home Screen")
                     .padding()
