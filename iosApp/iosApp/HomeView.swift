@@ -6,6 +6,12 @@ struct HomeView: ViewControllable {
     var viewModel: HomeViewModel?
     var holder = NavStackHolder()
 
+    // Computed property to provide @ObservedObject
+    var observedViewModel: HomeViewModel? {
+        get { viewModel }
+        set { viewModel = newValue }
+    }
+
     var body: some View {
         VStack {
             Text("Home Screen")
