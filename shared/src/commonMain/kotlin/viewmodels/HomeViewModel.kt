@@ -5,9 +5,9 @@ import kotlinx.coroutines.CoroutineScope
 import navigation.Router
 
 class HomeViewModel(
-    private val viewModelScope: CoroutineScope,
+    coroutineScope: CoroutineScope,
     private val router: Router,
-) : ViewModel(viewModelScope) {
+) : ViewModel(coroutineScope) {
 
     fun navigateToNews() {
         router.navigate("/screens/news")

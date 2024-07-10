@@ -16,15 +16,20 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     sourceSets {
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.navigation.compose)
             implementation(libs.koin.composeVM)
             implementation(libs.koin.androidx.compose)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.serialization)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.ktor.io)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -78,4 +83,5 @@ dependencies {
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
 }
+
 
