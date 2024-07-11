@@ -12,23 +12,34 @@ struct NewsView: ViewControllable {
         set { viewModel = newValue }
     }
 
+    @State
+    private var boundArticles: [Article] = []
+    
     var body: some View {
-        VStack {
-            Text("News Screen")
-                .font(.largeTitle)
-                .padding()
-                .background(Color.blue)
-            Button(action: {
-                observedViewModel?.navigateBack()
-            }) {
-                Text("Go to Home Screen")
-                    .padding()
-                    .background(Color.green)
-                    .cornerRadius(10)
+        NavigationView {
+            List(boundArticles, id: \.url){ article in
+                NewsListItem(article: article)
             }
+            .collect(flow: observedViewModel!.articles, into: $boundArticles)
+            .listStyle(PlainListStyle())
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.yellow)
+        .onAppear {
+            observedViewModel?.fetchNews()
+                    
+        }
+        /*
+        NavigationView {
+            Observing(observedViewModel!.articles) { articles in
+                List(articles, id: \.url) { article in // Provide id based on article.url
+                    NewsListItem(article: article)
+                }
+                .listStyle(PlainListStyle())
+            }
+            
+        }
+        .onAppear {
+            observedViewModel?.fetchNews()
+        }*/
     }
 
     func loadView() {
@@ -39,3 +50,40 @@ struct NewsView: ViewControllable {
         // Additional actions when the view appears
     }
 }
+
+/*
+struct NewsView: ViewControllable {
+    // Use a property without the wrapper for protocol conformance
+    var viewModel: NewsViewModel?
+    var holder = NavStackHolder()
+
+    // Computed property to provide @ObservedObject
+    var observedViewModel: NewsViewModel? {
+        get { viewModel }
+        set { viewModel = newValue }
+    }
+
+    var body: some View {
+        NavigationView {
+
+            Observing(observedViewModel!.articles) { articles  in
+                List(articles, id: \.self) { article in
+                    NewsListItem(article: article)
+            }
+            .listStyle(PlainListStyle())
+        }
+        }
+        .onAppear {
+            observedViewModel?.fetchNews()
+        }
+    }
+
+    func loadView() {
+        // Additional setup if needed
+    }
+
+    func viewOnAppear(viewController: UIViewController) {
+        // Additional actions when the view appears
+    }
+}*/
+

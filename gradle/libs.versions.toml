@@ -24,6 +24,8 @@ ktor = "2.3.12"
 serialization-plugin = "2.0.0"
 serialization = "1.7.1"
 coil3 = "3.0.0-alpha06"
+skie = "0.8.2"
+skie-annotations = "0.8.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -45,7 +47,6 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinComposeMultiplatform" }
-
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
@@ -57,6 +58,7 @@ coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3"
 coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil3" }
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil3" }
 coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil3" }
+touchlab-skie-annotations = { module = "co.touchlab.skie:configuration-annotations", version.ref = "skie-annotations" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -65,3 +67,4 @@ jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization-plugin" }
+touchlab-skie = { id = "co.touchlab.skie", version.ref = "skie" }

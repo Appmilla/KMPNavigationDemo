@@ -7,9 +7,17 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.serialization)
+    alias(libs.plugins.touchlab.skie)
 }
 
 kotlin {
+    // https://kotlinlang.org/docs/multiplatform-expect-actual.html#expected-and-actual-classes
+    // To suppress this warning about usage of expected and actual classes
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    compilerOptions {
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
+
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
@@ -50,6 +58,7 @@ kotlin {
             implementation(libs.coil.compose)
             implementation(libs.coil.mp)
             implementation(libs.coil.network.ktor)
+            implementation(libs.touchlab.skie.annotations)
         }
         androidMain.dependencies {
             implementation(compose.preview)
@@ -59,6 +68,12 @@ kotlin {
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
         }
+    }
+}
+
+skie {
+    features {
+        enableSwiftUIObservingPreview = true
     }
 }
 
@@ -84,3 +99,4 @@ dependencies {
     implementation(libs.androidx.runtime.android)
     implementation(libs.koin.android)
 }
+

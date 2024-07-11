@@ -1,6 +1,5 @@
 package screens
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -72,7 +71,7 @@ fun NewsListItem(article: Article) {
             Spacer(modifier = Modifier.width(16.dp))
             Column {
                 Text(text = article.title, style = MaterialTheme.typography.h6)
-                article.description?.let { Text(text = it, style = MaterialTheme.typography.body2) }
+                Text(text = article.description, style = MaterialTheme.typography.body2)
             }
         }
     }
