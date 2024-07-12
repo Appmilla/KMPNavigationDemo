@@ -24,13 +24,13 @@ data class NewsResponse(
     val articles: List<JsonElement>
 )
 
-class NewsArticleRepository(private val httpClient: HttpClient) {
-    private val json = Json {
-        ignoreUnknownKeys = true // Ignore unknown keys in the JSON data
-    }
+class NewsArticleRepository(
+    private val httpClient: HttpClient,
+    private val jsonConfiguration: Json) {
 
     fun getNews(): Flow<List<Article>> = flow {
         val apiKey = "YourAPIKey"
+        
         val response: HttpResponse = httpClient.get("https://newsapi.org/v2/top-headlines") {
             parameter("country", "us")
             parameter("apiKey", apiKey)
@@ -49,7 +49,7 @@ class NewsArticleRepository(private val httpClient: HttpClient) {
                 val urlToImage = jsonObject["urlToImage"]?.jsonPrimitive?.contentOrNull
 
                 if (title != null && description != null && url != null && urlToImage != null) {
-                    json.decodeFromJsonElement<Article>(jsonElement)
+                    jsonConfiguration.decodeFromJsonElement<Article>(jsonElement)
                 } else {
                     null
                 }
@@ -60,15 +60,5 @@ class NewsArticleRepository(private val httpClient: HttpClient) {
         }
 
         emit(articles)
-    }
-}
-
-// Configure HttpClient for JSON serialization
-val jsonClient = HttpClient {
-    install(ContentNegotiation) {
-        json(Json {
-            ignoreUnknownKeys = true // Adjust as needed
-            isLenient = true
-        })
     }
 }
