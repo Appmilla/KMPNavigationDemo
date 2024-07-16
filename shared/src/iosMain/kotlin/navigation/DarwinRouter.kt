@@ -3,6 +3,7 @@ package navigation
 import platform.UIKit.UINavigationController
 import platform.UIKit.UIViewController
 
+class DarwinScreen(val createViewController: () -> UIViewController) : Screen
 
 class DarwinRouter(private val navigationController: UINavigationController) : Router {
     private val routes = mutableMapOf<String, () -> UIViewController>()
@@ -22,5 +23,3 @@ class DarwinRouter(private val navigationController: UINavigationController) : R
         routes[uri] = (screen as? DarwinScreen)?.createViewController ?: { UIViewController() }
     }
 }
-
-class DarwinScreen(val createViewController: () -> UIViewController) : Screen

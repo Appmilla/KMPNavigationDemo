@@ -19,7 +19,6 @@
 		CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E52C347A0F001976EB /* HomeView.swift */; };
 		CFBA10E82C347A79001976EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA10E72C347A79001976EB /* NewsView.swift */; };
 		CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */; };
-		CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */; };
 		D57C2CF1102A55D7D3BA8F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C2E0E2E943D71D25268BB /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		CFBA10E52C347A0F001976EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CFBA10E72C347A79001976EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
-		CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterExtensions.swift; sourceTree = "<group>"; };
 		D57C2E0E2E943D71D25268BB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +95,6 @@
 				CFBA10E52C347A0F001976EB /* HomeView.swift */,
 				CFBA10E72C347A79001976EB /* NewsView.swift */,
 				CFD30B0E2C3528CB00B3D448 /* UIKitViewController.swift */,
-				CFD30B122C3563BC00B3D448 /* RouterExtensions.swift */,
 				CF162FA02C37EB0900BBF0A2 /* MainCoordinator.swift */,
 				CF162FA22C381BBB00BBF0A2 /* ViewControllable.swift */,
 				CF162FAC2C3A93D500BBF0A2 /* ViewModelHostingController.swift */,
@@ -218,7 +215,6 @@
 				CF162FA32C381BBB00BBF0A2 /* ViewControllable.swift in Sources */,
 				CFD30B0F2C3528CB00B3D448 /* UIKitViewController.swift in Sources */,
 				CF162FA12C37EB0900BBF0A2 /* MainCoordinator.swift in Sources */,
-				CFD30B132C3563BC00B3D448 /* RouterExtensions.swift in Sources */,
 				CF162FB52C3FEF8900BBF0A2 /* NewsListItem.swift in Sources */,
 				CF162FB12C3BCC5200BBF0A2 /* Koin.swift in Sources */,
 				CFBA10E62C347A0F001976EB /* HomeView.swift in Sources */,
