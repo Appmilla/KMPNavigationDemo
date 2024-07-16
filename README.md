@@ -1,3 +1,9 @@
+A KMP app showing native and shared ui in the same app. Using SwiftUI screens and Compose Multiplatform screens with UIKit navigation on iOS.
+
+Koin is used for DI and Touchlab's SKIE for consuming the VieWModels Flows.
+
+A [blog article](https://appmilla.com/latest/harnessing-the-power-of-kotlin-multiplatform-combining-native-and-shared-uis/) accompanies the code.
+
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
