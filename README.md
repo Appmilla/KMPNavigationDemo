@@ -1,8 +1,15 @@
-A KMP app showing native and shared ui in the same app. Using SwiftUI screens and Compose Multiplatform screens with UIKit navigation on iOS.
+A Kotlin Multiplatform (KMP) App showing native and shared ui in the same app. Using SwiftUI screens and Compose Multiplatform screens with UIKit navigation on iOS.
 
-Koin is used for DI and Touchlab's SKIE for consuming the VieWModels Flows.
+Koin is used for DI and Touchlab's SKIE to consume the VieWModels Flows.
 
 A [blog article](https://appmilla.com/latest/harnessing-the-power-of-kotlin-multiplatform-combining-native-and-shared-uis/) accompanies the code.
+
+The app reads data from the [NewsAPI](https://newsapi.org). Please go to the site, get an API key, and paste this into the NewsArticleRepository's getNews() function.
+
+```kotlin
+fun getNews(): Flow<List<Article>> = flow {
+        val apiKey = "YourAPIKey"
+```
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
